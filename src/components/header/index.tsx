@@ -9,13 +9,13 @@ type Props = {
 
 export const Header = ({ label }: Props) => {
   return (
-    <header className='mb-5 flex w-full items-center justify-between gap-2.5'>
+    <header className='mb-6 flex w-full items-center justify-between gap-2.5'>
       <span className='text-sm font-medium'>{label}</span>
 
       <div className='flex items-center gap-3.5'>
         <Logo />
 
-        <Button size='sm' className='text-sm font-semibold'>
+        <Button size='sm' className='px-2 text-sm font-semibold'>
           <Image
             width={16}
             height={16}
@@ -67,7 +67,7 @@ export const Header = ({ label }: Props) => {
 
 const IconContainer = ({ children }: PropsWithChildren) => {
   return (
-    <button className='hover:brightness-80 relative transition-all'>
+    <button className='hover:brightness-65 relative transition-all'>
       {children}
     </button>
   )

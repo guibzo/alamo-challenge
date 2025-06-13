@@ -87,7 +87,7 @@ const Input = ({
   )
 
   const iconBaseClasses =
-    'absolute inset-y-0 flex items-center justify-center peer-disabled:opacity-50 [&>svg]:size-5 [&>svg]:transition-all '
+    'absolute inset-y-0 flex items-center justify-center peer-disabled:opacity-50 [&>svg]:size-[18px] [&>svg]:transition-all '
 
   const iconColorClasses = cn(
     'text-muted-foreground/50',
