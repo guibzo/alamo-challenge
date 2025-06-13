@@ -1,3 +1,4 @@
+import { Providers } from '@/components/_providers'
 import { blinkMac } from '@/fonts/fonts'
 import { cn } from '@/lib/cn'
 import '@/styles/global.css'
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt'>
-      <body className={cn('antialiased', blinkMac.className)}>{children}</body>
+      <body className={cn('antialiased', blinkMac.className)}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

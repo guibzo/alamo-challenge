@@ -1,5 +1,5 @@
+import type { SolutionData } from '@/@types/solution-data'
 import { cn } from '@/lib/cn'
-import { SolutionData } from '../page'
 
 type Props = {
   solutions: SolutionData[]
