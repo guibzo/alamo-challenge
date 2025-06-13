@@ -7,7 +7,7 @@ type Props = {
 
 export function SolutionList({ solutions }: Props) {
   return (
-    <div className='max-h-full space-y-6 overflow-y-auto'>
+    <main className='max-h-full space-y-6 overflow-y-auto'>
       {solutions.map((solution, solutionIndex) => (
         <div
           key={solutionIndex}
@@ -17,6 +17,7 @@ export function SolutionList({ solutions }: Props) {
             <h4 className='mb-1.5 text-sm font-semibold'>
               {solution.time} – {solution.title}
             </h4>
+
             <ul className='ml-2.5 space-y-2 text-sm'>
               {solution.items.map((item, itemIndex) => (
                 <li
@@ -32,15 +33,18 @@ export function SolutionList({ solutions }: Props) {
                 </li>
               ))}
             </ul>
+
             {solution.observation && (
               <span className='text-muted-foreground mt-3 text-xs'>
                 {solution.observation}
               </span>
             )}
           </div>
+
           <ul className='space-y-[26px] text-xs font-medium'>
             {solution.items.map((item, itemIndex) => {
               const isLast = itemIndex === solution.items.length - 1
+
               return (
                 <li key={itemIndex} className={cn(isLast && 'text-primary')}>
                   {item.nutritional}
@@ -50,6 +54,6 @@ export function SolutionList({ solutions }: Props) {
           </ul>
         </div>
       ))}
-    </div>
+    </main>
   )
 }

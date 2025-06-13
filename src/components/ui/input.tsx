@@ -74,7 +74,7 @@ const Input = ({
   }, [])
 
   const inputClasses = cn(
-    'peer flex h-6 w-full bg-card rounded-[6px] border border-border px-2.5 py-2 text-base transition-all',
+    'peer flex h-8 w-full bg-card rounded-[6px] border border-border px-2.5 py-2 text-base transition-all',
     'placeholder:text-muted-foreground/55 placeholder:text-sm ',
     'file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground',
     'disabled:cursor-not-allowed disabled:opacity-50',

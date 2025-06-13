@@ -5,7 +5,7 @@ import { LucideSearch } from 'lucide-react'
 export const SolutionFilters = () => {
   return (
     <div className='mt-11 flex items-center gap-2.5'>
-      <Input startIcon={<LucideSearch />} />
+      <Input className='h-6' startIcon={<LucideSearch />} />
       <Button size='sm'>Buscar</Button>
       <Button variant='secondary' size='sm'>
         Filtragem Avançada

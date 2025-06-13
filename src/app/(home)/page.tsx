@@ -1,27 +1,14 @@
+import type { SolutionData } from '@/@types/solution-data'
 import { Container } from '@/components/containers/container'
 import { ContentContainer } from '@/components/containers/content-container'
 import { Header } from '@/components/header'
 import { Sidebar } from '@/components/sidebar'
 import { Title } from '@/components/title'
-import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
-import { LucidePlus } from 'lucide-react'
 import type { Metadata } from 'next'
+import { AddRoutine } from './(components)/add-routine'
 import { SolutionFilters } from './(components)/filters'
 import { SolutionList } from './(components)/list'
-
-type Item = {
-  main: string
-  secondary?: string
-  nutritional: string
-}
-
-export type SolutionData = {
-  title: string
-  time: string
-  items: Item[]
-  observation: string
-}
 
 export default function Home() {
   return (
@@ -29,15 +16,16 @@ export default function Home() {
       <Sidebar />
       <ContentContainer>
         <Header label='Cadastros' />
+
         <div className='flex items-center justify-between gap-2.5'>
           <Title>Gestão de rotinas de laboratório</Title>
-          <Button>
-            <LucidePlus className='size-4 text-white' aria-hidden='true' />
-            Adicionar Rotina
-          </Button>
+          <AddRoutine />
         </div>
+
         <SolutionFilters />
+
         <Separator className='mb-4 mt-2' />
+
         <SolutionList solutions={solutionData} />
       </ContentContainer>
     </Container>
