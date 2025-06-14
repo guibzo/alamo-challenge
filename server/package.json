@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server --watch db.json --port 3001",
-    "dev": "json-server --watch db.json --port 3001 --delay 200"
+    "dev": "json-server --watch db.json --port 3001 --delay 600"
   },
   "devDependencies": {
     "json-server": "^0.17.4"
