@@ -8,8 +8,19 @@ import { parseAsString, useQueryState } from 'nuqs'
 */
 
 export const useFilters = () => {
-  const [query, setQueryRaw] = useQueryState('query', parseAsString)
-  const [time, setTimeRaw] = useQueryState('time', parseAsString)
+  const [query, setQueryRaw] = useQueryState(
+    'query',
+
+    parseAsString.withOptions({
+      shallow: false,
+    }),
+  )
+  const [time, setTimeRaw] = useQueryState(
+    'time',
+    parseAsString.withOptions({
+      shallow: false,
+    }),
+  )
 
   const setQuery = (value: string) => setQueryRaw(getNullableValue(value))
   const setTime = (value: string) => setTimeRaw(getNullableValue(value))
