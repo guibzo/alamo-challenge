@@ -2,12 +2,11 @@ Desafio técnico de uma vaga em Next.js - Alamo.
 
 # Setup
 
-Clone o projeto e instale as dependências:
+Clone o projeto:
 
 ```bash
 git clone https://github.com/guibzo/alamo-challenge.git
 cd alamo-challenge
-npm i
 ```
 
 # Rodando o projeto
@@ -16,10 +15,12 @@ Para rodar o projeto, execute:
 
 ```bash
 cd server
+npm install
 npm run dev
 # No servidor, há um delay artificial em desenvolvimento de 600ms.
 
-cd ..
+cd .
+npm install
 npm run dev
 ```
 
