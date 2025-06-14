@@ -14,7 +14,7 @@ const eslintConfig = [
     },
     settings: {
       next: {
-        rootDir: 'packages/my-app/',
+        rootDir: 'packages/alamo/',
       },
     },
   }),
