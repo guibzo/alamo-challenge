@@ -1,9 +1,10 @@
 'use client'
 
-import { useTextarea } from '@/hooks/use-textarea'
-import { cn } from '@/lib/cn'
 import * as React from 'react'
 import { useImperativeHandle } from 'react'
+
+import { useTextarea } from '@/hooks/use-textarea'
+import { cn } from '@/lib/cn'
 
 export type TextareaRef = {
   textArea: HTMLTextAreaElement

@@ -1,5 +1,13 @@
 'use client'
 
+import { zodResolver } from '@hookform/resolvers/zod'
+import { LucidePlus } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { useFieldArray, useForm } from 'react-hook-form'
+import { toast } from 'sonner'
+import { useHookFormMask } from 'use-mask-input'
+
 import { FormError } from '@/components/forms/form-error'
 import { FormField } from '@/components/forms/form-field'
 import { Button } from '@/components/ui/button'
@@ -15,14 +23,8 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { createSolution } from '@/http/solutions/create-solution'
 import { validateTimeInput } from '@/utils/validate-time-input'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { LucidePlus } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
-import { useFieldArray, useForm } from 'react-hook-form'
-import { toast } from 'sonner'
-import { useHookFormMask } from 'use-mask-input'
-import { solutionSchema, type SolutionFormData } from '../../schema'
+
+import { type SolutionFormData, solutionSchema } from '../../schema'
 import { FormRoutineItem } from './routine-item'
 
 export const AddRoutineForm: React.FC = () => {

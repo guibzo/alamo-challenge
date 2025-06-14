@@ -1,10 +1,12 @@
+import { LucideMenu } from 'lucide-react'
+
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { LucideMenu } from 'lucide-react'
+
 import { SidebarAvatarDropdown } from './avatar-dropdown'
 import { SidebarNavigation } from './navigation'
 

@@ -1,9 +1,10 @@
-import { Providers } from '@/components/_providers'
-import { blinkMac } from '@/fonts/fonts'
-import { cn } from '@/lib/cn'
 import '@/styles/global.css'
 
 import type { Metadata } from 'next'
+
+import { Providers } from '@/components/_providers'
+import { blinkMac } from '@/fonts/fonts'
+import { cn } from '@/lib/cn'
 
 export const metadata: Metadata = {
   title: {

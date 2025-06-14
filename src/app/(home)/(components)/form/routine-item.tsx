@@ -1,8 +1,10 @@
+import { LucideTrash2 } from 'lucide-react'
+import type { FieldErrors, UseFormRegister } from 'react-hook-form'
+
 import { FormField } from '@/components/forms/form-field'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { LucideTrash2 } from 'lucide-react'
-import type { FieldErrors, UseFormRegister } from 'react-hook-form'
+
 import type { SolutionFormData } from '../../schema'
 
 type Props = {

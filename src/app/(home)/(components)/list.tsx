@@ -1,8 +1,9 @@
+import { use } from 'react'
+
 import type { SolutionData } from '@/@types/solution-data'
 import { NoContent } from '@/components/no-content'
 import { Show } from '@/components/utils/show'
 import { cn } from '@/lib/cn'
-import { use } from 'react'
 
 type Props = {
   solutionsPromise: Promise<SolutionData[]>

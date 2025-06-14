@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { PropsWithChildren } from 'react'
+
 import { Logo } from '../logo'
 import { Button } from '../ui/button'
 

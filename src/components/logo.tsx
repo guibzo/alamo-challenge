@@ -1,6 +1,7 @@
-import { cn } from '@/lib/cn'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { cn } from '@/lib/cn'
 
 type Props = {
   className?: string

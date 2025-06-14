@@ -1,8 +1,9 @@
 'use client'
-import { cn } from '@/lib/cn'
 import * as LabelPrimitive from '@radix-ui/react-label'
 import { LucideAsterisk } from 'lucide-react'
 import * as React from 'react'
+
+import { cn } from '@/lib/cn'
 
 type Props = React.ComponentProps<typeof LabelPrimitive.Root> & {
   required?: boolean

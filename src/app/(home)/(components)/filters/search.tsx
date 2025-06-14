@@ -1,10 +1,11 @@
 'use client'
 
+import { LucideSearch } from 'lucide-react'
+import { useState } from 'react'
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useFilters } from '@/hooks/use-filters'
-import { LucideSearch } from 'lucide-react'
-import { useState } from 'react'
 
 export const SearchSolutionsFilter = () => {
   const { query, setQuery } = useFilters()

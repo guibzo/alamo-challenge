@@ -1,3 +1,7 @@
+import type { Metadata } from 'next'
+import type { SearchParams } from 'nuqs'
+import { Suspense } from 'react'
+
 import { Container } from '@/components/containers/container'
 import { ContentContainer } from '@/components/containers/content-container'
 import { Header } from '@/components/header'
@@ -5,9 +9,7 @@ import { ResponsiveSidebar, Sidebar } from '@/components/sidebar'
 import { Title } from '@/components/title'
 import { Separator } from '@/components/ui/separator'
 import { getSolutions } from '@/http/solutions/get-solutions'
-import type { Metadata } from 'next'
-import type { SearchParams } from 'nuqs'
-import { Suspense } from 'react'
+
 import { SolutionFilters } from './(components)/filters'
 import { AddRoutineForm } from './(components)/form'
 import { SolutionList } from './(components)/list'

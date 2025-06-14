@@ -1,6 +1,7 @@
-import { cn } from '@/lib/cn'
 import { cva, type VariantProps } from 'class-variance-authority'
 import type { ReactNode } from 'react'
+
+import { cn } from '@/lib/cn'
 
 const containerVariants = cva(
   'mx-auto w-full flex-1 justify-center  p-[var(--content-container-padding)] sm:p-[var(--content-container-sm-padding)]',

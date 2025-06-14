@@ -1,4 +1,5 @@
 import type { SolutionData } from '@/@types/solution-data'
+
 import { httpClient } from '../client'
 
 type Params = Omit<SolutionData, 'id' | 'observation'>
