@@ -32,7 +32,7 @@ export const SidebarAvatarDropdown = () => {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className='w-[var(--sidebar-width)]'>
+      <DropdownMenuContent className='w-[calc(75vw-6px)] sm:w-[var(--sidebar-width)]'>
         <DropdownMenuLabel className='flex min-w-0 flex-col'>
           <span className='truncate text-sm font-medium'>Gulherme Viana</span>
           <span className='text-muted-foreground truncate text-xs'>

@@ -2,7 +2,7 @@ import type { SolutionData } from '@/@types/solution-data'
 import { Container } from '@/components/containers/container'
 import { ContentContainer } from '@/components/containers/content-container'
 import { Header } from '@/components/header'
-import { Sidebar } from '@/components/sidebar'
+import { ResponsiveSidebar, Sidebar } from '@/components/sidebar'
 import { Title } from '@/components/title'
 import { Separator } from '@/components/ui/separator'
 import type { Metadata } from 'next'
@@ -14,10 +14,12 @@ export default function Home() {
   return (
     <Container>
       <Sidebar />
+
       <ContentContainer>
+        <ResponsiveSidebar />
         <Header label='Cadastros' />
 
-        <div className='flex items-center justify-between gap-2.5'>
+        <div className='flex flex-col justify-between gap-2.5 sm:flex-row sm:items-center'>
           <Title>Gestão de rotinas de laboratório</Title>
           <AddRoutine />
         </div>

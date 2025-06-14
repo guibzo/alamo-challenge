@@ -10,7 +10,7 @@ export const Title = ({ children, className }: Props) => {
   return (
     <h1
       className={cn(
-        'line-clamp-1 text-[28px] font-semibold tracking-tighter',
+        'line-clamp-2 text-[28px] font-semibold tracking-tighter sm:line-clamp-1',
         className,
       )}
     >
