@@ -7,6 +7,6 @@ export type SolutionItem = {
 export type SolutionData = {
   title: string
   time: string
-  observation: string
+  observation?: string
   items: SolutionItem[]
 }

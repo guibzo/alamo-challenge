@@ -19,21 +19,27 @@ export const AdvancedSolutionsFilters = () => {
     setTime(localTime)
   }
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch()
+    }
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='outline'>Filtragem Avançada</Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className='w-80'>
+      <DropdownMenuContent className='w-80' onKeyDown={handleKeyPress}>
         <div className='grid gap-4 p-2.5'>
           <div>
             <Label htmlFor='time'>Horário</Label>
             <Input
               id='time'
-              type='time'
               placeholder='Digite o horário...'
               value={localTime}
+              type='time'
               onChange={(e) => setLocalTime(e.target.value)}
             />
           </div>

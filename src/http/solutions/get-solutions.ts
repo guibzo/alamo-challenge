@@ -1,5 +1,4 @@
 import type { SolutionData } from '@/@types/solution-data'
-import { sleep } from '@/utils/sleep'
 import { httpClient } from '../client'
 
 type Params = {
@@ -10,8 +9,6 @@ type Params = {
 export const getSolutions = async (
   params?: Params,
 ): Promise<SolutionData[]> => {
-  await sleep(2000)
-
   const searchParams = new URLSearchParams()
 
   if (params?.query && params.query.trim()) {

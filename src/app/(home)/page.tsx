@@ -8,19 +8,20 @@ import { getSolutions } from '@/http/solutions/get-solutions'
 import type { Metadata } from 'next'
 import type { SearchParams } from 'nuqs'
 import { Suspense } from 'react'
-import { AddRoutine } from './(components)/add-routine'
 import { SolutionFilters } from './(components)/filters'
+import { AddRoutineForm } from './(components)/form'
 import { SolutionList } from './(components)/list'
 import { SolutionListSkeleton } from './(components)/list-skeleton'
 
 export default async function Page({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
+  const params = await searchParams
   const filters: SearchParams = {
-    query: searchParams.query,
-    time: searchParams.time,
+    query: params.query,
+    time: params.time,
   }
 
   const solutionsPromise = getSolutions({
@@ -39,7 +40,7 @@ export default async function Page({
 
         <div className='flex flex-col justify-between gap-2.5 sm:flex-row sm:items-center'>
           <Title>Gestão de rotinas de laboratório</Title>
-          <AddRoutine />
+          <AddRoutineForm />
         </div>
 
         <SolutionFilters />
